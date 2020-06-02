@@ -2,6 +2,8 @@ package org.spring.graphql;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,4 +33,11 @@ public class VehicleService {
 		}
 		return null;
 	}
+	
+	public Vehicle createVehicle(Vehicle vehicle) {
+		vehicles.add(vehicle);
+		vehicle.setId(new Random().nextInt());
+		return vehicle;
+	}
+	
 }

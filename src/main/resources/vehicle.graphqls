@@ -9,3 +9,7 @@ type Query {
 vehicles:[Vehicle]
 vehicle(id: ID):Vehicle
 }
+
+type Mutation {
+createVehicle(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicle
+}
